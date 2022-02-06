@@ -1,0 +1,72 @@
+class u
+{
+int x;
+void func()
+{
+ System.out.print("DATA" + x);
+}}
+class i
+{
+ public static void main(String[] args){
+ u ob = new u()
+ob.x=90;
+ob.show();
+}
+}
+
+
+
+import java.util.scanner;
+class test{
+ int x;
+}
+class testdrive{
+public static void main(String args[]){
+test ob = new test();
+scanner sc = new scanner(System.in);
+System.out.print("enter a number");
+ob.x = sc.nextInt();
+System out.print("data" + ob.x);
+}}
+
+
+
+
+
+class test {
+int x;
+static int y;
+}
+class textdrive{
+ public static void main(String args[])[
+ test ob1=new test();
+test ob2 = new test();
+ob1.x = 10;
+ob2.x = 20;
+ob1.y = 30;
+ob2.y = 40;
+System.out.print("print" + ob1.x + ob2.x + ob1.y + ob2.y);
+}}
+
+
+
+
+
+import java.util.scanner;
+class cab{
+ int fare;
+void showfae(){
+ System.out.print("fare amount" + fare);
+}
+}
+class ridecab{
+ public static void main(String args[]){
+ cab id = new cab();
+Scanner sc = new Scanner(System.in);
+int d;
+System.out.print(enter travel dist in km");
+d = sc.nextInt;
+id.fare = 12 * d;
+id.showfare();
+}}
+
