@@ -1,0 +1,33 @@
+import java.util.scanner;
+class test{
+public static void main(String[] args){
+int a,b;
+Scanner sc = new Scanner(System.in);
+System.out.print("enter two numbers:");
+a=sc.nextInt();
+b=sc.nextInt();
+try{
+ System.out.println("result" + a / b);
+}
+catch(Exception e){
+System.out.println(e);
+System.out.println("exception is handled");
+}
+
+
+
+
+class test{
+ public static void main(String[] args)
+{
+ System.out.println("generated exception");
+ throw new ArithmeticException("created");
+ System.out.println("Excepton generated");
+}
+}
+
+
+
+
+
+

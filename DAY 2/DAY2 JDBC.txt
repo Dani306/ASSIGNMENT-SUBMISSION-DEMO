@@ -1,0 +1,44 @@
+create database essentials;
+drop database essentials;
+show databases;
+use essentials;
+show tables;
+create table student(roll int,name varchar(30),mark int(10));
+desc student;
+insert into student values(101,'dann',87);
+insert into student values(102,'ram',67);
+select * from student;
+update student set mark = 89 where sname = 'dann';
+set SQL_SAFE_UPDATES = 0;
+
+
+
+
+
+
+import java.sql.*;
+class DatabaseConnection{
+ public static void main(String[] args){
+try{
+                                                          //register driver
+                                                          //get mysql connector for java
+class.forName("com.mysql.cj.jdbc.Driver");
+                                                          //create connection
+Connection con = DriverManager.getconnection("jdbc:mysql://localhost:");
+                                                          //create statement
+Statement st = con.createStatement();
+                                                            //executing query
+Resultset rs = st.executeQuery("select * from student;");
+while(rs.next())
+{
+ System.out.println("ROLL:" + rs.getint(1));
+ System.out.println("name:" + rs.getString(2));
+ System.out.println("mark:" + rs.getInt(3));
+}
+                                                             //close connection
+conn.close();
+}
+catch(Exception e){
+ System.out.println(e);
+ System.out.println("Exception handled");
+}

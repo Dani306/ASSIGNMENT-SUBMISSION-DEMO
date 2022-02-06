@@ -1,0 +1,38 @@
+import java.util.scanner
+class cab{
+ int fare;
+cab(){
+ fare=40;}
+
+cab(int amt){
+fare = amt;}
+void showfare(){
+System.out.print("fare amount: " + fare);
+}
+}
+
+class ridecab{
+public static void main(String args[]){
+ cab id=new cab();
+ Scanner sc=new Scanner(System.in);
+int d;
+int pickup_dis;
+System.out.print("enter distance of cab from user in km:");
+pickup_dis = sc.nextInt();
+System.out.print("enter travelling distance in km:");
+d = sc.nextInt();
+if(pickup_dis<=5)
+{
+ cab id = new cab();
+ id.fare += 12*d;
+id.showfare();
+}
+else
+{
+ cab id = new cab(40 + (pickup_dis - 5) * 10);
+id.fare += 12*d;
+id.showfare();
+}
+}
+}
+
